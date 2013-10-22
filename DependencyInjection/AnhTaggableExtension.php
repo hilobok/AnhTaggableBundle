@@ -32,7 +32,7 @@ class AnhTaggableExtension extends Extension implements PrependExtensionInterfac
      */
     public function prepend(ContainerBuilder $container)
     {
-        $config = array(
+        $container->prependExtensionConfig('doctrine', array(
             'orm' => array(
                 'mappings' => array(
                     'anh_taggable' => array(
@@ -44,7 +44,12 @@ class AnhTaggableExtension extends Extension implements PrependExtensionInterfac
                     )
                 )
             )
-        );
-        $container->prependExtensionConfig('doctrine', $config);
+        ));
+
+        $container->prependExtensionConfig('assetic', array(
+            'bundles' => array(
+                'AnhTaggableBundle'
+            )
+        ));
     }
 }
