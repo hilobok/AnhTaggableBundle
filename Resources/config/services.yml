@@ -1,0 +1,37 @@
+parameters:
+    anh_taggable.entity.tag.class: Anh\Taggable\Entity\Tag
+    anh_taggable.entity.tagging.class: Anh\Taggable\Entity\Tagging
+    anh_taggable.manager.class: Anh\Taggable\TaggableManager
+    anh_taggable.form.type.tag.class: Anh\Bundle\TaggableBundle\Form\Type\TagType
+    anh_taggable.form.type.tags.class: Anh\Bundle\TaggableBundle\Form\Type\TagsType
+    anh_taggable.subscriber.class: Anh\Bundle\TaggableBundle\TaggableSubscriber
+
+services:
+    anh_taggable.manager:
+        class: %anh_taggable.manager.class%
+        arguments:
+            - @doctrine.orm.entity_manager
+            - %anh_taggable.entity.tag.class%
+            - %anh_taggable.entity.tagging.class%
+
+    anh_taggable.form.type.tag:
+        class: %anh_taggable.form.type.tag.class%
+        arguments:
+            - %anh_taggable.entity.tag.class%
+        tags:
+            - { name: form.type, alias: anh_taggable_form_type_tag }
+
+    anh_taggable.form.type.tags:
+        class: %anh_taggable.form.type.tags.class%
+        arguments:
+            - @anh_taggable.manager
+            - @router
+        tags:
+            - { name: form.type, alias: tags }
+
+    anh_taggable.subscriber:
+        class: %anh_taggable.subscriber.class%
+        arguments:
+            - @service_container
+        tags:
+            - { name: doctrine.event_subscriber }

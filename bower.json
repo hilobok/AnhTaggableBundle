@@ -1,0 +1,7 @@
+{
+    "name": "AnhTaggableBundle",
+    "private": true,
+    "dependencies": {
+        "tag-it": "git://github.com/hilobok/tag-it.git"
+    }
+}

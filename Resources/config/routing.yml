@@ -1,0 +1,3 @@
+anh_taggable_tags:
+    pattern:  /_taggable/tags.json
+    defaults: { _controller: AnhTaggableBundle:Default:tags }
