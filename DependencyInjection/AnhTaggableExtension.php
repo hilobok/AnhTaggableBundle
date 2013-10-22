@@ -32,15 +32,6 @@ class AnhTaggableExtension extends Extension implements PrependExtensionInterfac
      */
     public function prepend(ContainerBuilder $container)
     {
-/*        $config = array(
-            'form' => array(
-                'resources' => array(
-                    'AnhTaggableBundle:Form:tags.html.twig'
-                )
-            )
-        );
-        $container->prependExtensionConfig('twig', $config);
-*/
         $config = array(
             'orm' => array(
                 'mappings' => array(
