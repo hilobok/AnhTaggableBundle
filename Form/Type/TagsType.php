@@ -101,7 +101,7 @@ class TagsType extends AbstractType
         switch ($autocomplete) {
             case 'dynamic':
                 $tagitOptions['autocomplete'] = $tagitOptions['autocomplete'] + array(
-                    'source' => $this->router->generate('anh_taggable_tags')
+                    'source' => $this->router->generate('anh_taggable_search')
                 );
                 break;
 

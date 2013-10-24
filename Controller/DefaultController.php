@@ -8,7 +8,7 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 
 class DefaultController extends Controller
 {
-    public function tagsAction(Request $request)
+    public function searchAction(Request $request)
     {
         return new JsonResponse($this->container->get('anh_taggable.manager')
             ->getTagRepository()
