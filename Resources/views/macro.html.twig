@@ -30,3 +30,17 @@
         });
     </script>
 {% endmacro %}
+
+{% macro listTags(tags, url) %}
+    <ul class="tags">
+        {% for tag in tags %}
+            <li>
+                {% if url %}
+                    <a href="{{ url|replace({ '%name%': tag.getName() }) }}">{{ tag.getName() }}</a>{% if not loop.last %}, {% endif %}
+                {% else %}
+                    {{ tag.getName() }}{% if not loop.last %}, {% endif %}
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+{% endmacro %}
