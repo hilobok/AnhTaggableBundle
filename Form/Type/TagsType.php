@@ -1,12 +1,12 @@
 <?php
 
-namespace Anh\Bundle\TaggableBundle\Form\Type;
+namespace Anh\TaggableBundle\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 use Symfony\Component\Form\FormBuilderInterface;
 use Anh\Taggable\TaggableManager;
-use Anh\Bundle\TaggableBundle\Form\Type\TagsTransformer;
+use Anh\TaggableBundle\Form\Type\TagsTransformer;
 
 use Symfony\Component\Form\FormView;
 use Symfony\Component\Form\FormInterface;

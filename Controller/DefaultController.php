@@ -1,6 +1,6 @@
 <?php
 
-namespace Anh\Bundle\TaggableBundle\Controller;
+namespace Anh\TaggableBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;

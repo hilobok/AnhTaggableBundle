@@ -1,6 +1,6 @@
 <?php
 
-namespace Anh\Bundle\TaggableBundle;
+namespace Anh\TaggableBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

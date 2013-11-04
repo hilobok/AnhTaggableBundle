@@ -1,6 +1,6 @@
 <?php
 
-namespace Anh\Bundle\TaggableBundle\Form\Type;
+namespace Anh\TaggableBundle\Form\Type;
 
 use Symfony\Component\Form\DataTransformerInterface;
 use Anh\Taggable\TaggableManager;

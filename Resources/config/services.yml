@@ -2,9 +2,9 @@ parameters:
     anh_taggable.entity.tag.class: Anh\Taggable\Entity\Tag
     anh_taggable.entity.tagging.class: Anh\Taggable\Entity\Tagging
     anh_taggable.manager.class: Anh\Taggable\TaggableManager
-    anh_taggable.form.type.tag.class: Anh\Bundle\TaggableBundle\Form\Type\TagType
-    anh_taggable.form.type.tags.class: Anh\Bundle\TaggableBundle\Form\Type\TagsType
-    anh_taggable.subscriber.class: Anh\Bundle\TaggableBundle\TaggableSubscriber
+    anh_taggable.form.type.tag.class: Anh\TaggableBundle\Form\Type\TagType
+    anh_taggable.form.type.tags.class: Anh\TaggableBundle\Form\Type\TagsType
+    anh_taggable.subscriber.class: Anh\TaggableBundle\TaggableSubscriber
 
 services:
     anh_taggable.manager:

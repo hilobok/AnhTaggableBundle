@@ -1,6 +1,6 @@
 <?php
 
-namespace Anh\Bundle\TaggableBundle;
+namespace Anh\TaggableBundle;
 
 use Anh\Taggable\TaggableManager;
 use Doctrine\ORM\Event\LifecycleEventArgs;

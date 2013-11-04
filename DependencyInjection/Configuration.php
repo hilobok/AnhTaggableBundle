@@ -1,6 +1,6 @@
 <?php
 
-namespace Anh\Bundle\TaggableBundle\DependencyInjection;
+namespace Anh\TaggableBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;

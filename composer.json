@@ -18,11 +18,11 @@
 
     "autoload":{
         "psr-0":{
-            "Anh\\Bundle\\TaggableBundle": ""
+            "Anh\\TaggableBundle": ""
         }
     },
 
-    "target-dir": "Anh/Bundle/TaggableBundle",
+    "target-dir": "Anh/TaggableBundle",
 
     "extra": {
         "branch-alias": {
