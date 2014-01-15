@@ -57,7 +57,7 @@ class TagsType extends AbstractType
             'readOnly',
             'tagLimit',
             'singleField',
-            'singleFieldDelimiter ',
+            'singleFieldDelimiter',
             'singleFieldNode',
             'tabIndex',
             'placeholderText'
