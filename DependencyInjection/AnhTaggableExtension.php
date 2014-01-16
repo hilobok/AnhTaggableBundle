@@ -47,8 +47,28 @@ class AnhTaggableExtension extends Extension implements PrependExtensionInterfac
         ));
 
         $container->prependExtensionConfig('assetic', array(
+            'assets' => array(
+                'anh_taggable_css' => array(
+                    'inputs' => array(
+                        'bundles/anhtaggable/components/tag-it/css/jquery.tagit.css',
+                        'bundles/anhtaggable/style.css'
+                    )
+                ),
+                'anh_taggable_js' => array(
+                    'inputs' => array(
+                        'bundles/anhtaggable/components/tag-it/js/tag-it.js',
+                        'bundles/anhtaggable/init.js'
+                    )
+                )
+            )
+        ));
+
+        $container->prependExtensionConfig('sp_bower', array(
+            'assetic' => array(
+                'enabled' => false
+            ),
             'bundles' => array(
-                'AnhTaggableBundle'
+                'AnhTaggableBundle' => null
             )
         ));
     }
