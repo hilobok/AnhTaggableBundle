@@ -13,7 +13,7 @@ class TagType extends AbstractType
     /**
      * @var string
      *
-     * Category entity class
+     * Tag entity class
      */
     protected $tagClass;
 
