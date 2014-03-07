@@ -1,6 +1,6 @@
 # AnhTaggableBundle
 
-Bundle which provides integration of [doctrine-extensions-taggable](https://github.com/hilobok/doctrine-extensions-taggable), adds form types for editing tag and tagging.
+Bundle provides integration of [doctrine-extensions-taggable](https://github.com/hilobok/doctrine-extensions-taggable), adds form types for editing tag and tagging.
 
 ## Installation
 
