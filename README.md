@@ -89,7 +89,7 @@ $ app/console doctrine:schema:update --force
 </html>
 ```
 
-[[/Resources/doc/example.png]]
+![Example](https://raw.github.com/hilobok/AnhTaggableBundle/master/Resources/doc/example.png)
 
 #### Note
 
