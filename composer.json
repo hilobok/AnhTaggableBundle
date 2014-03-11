@@ -11,7 +11,8 @@
     ],
 
     "require": {
-        "anh/doctrine-extensions-taggable": "~1.0"
+        "anh/doctrine-extensions-taggable": "~1.0",
+        "sp/bower-bundle": "~0.9"
     },
 
     "minimum-stability": "stable",
