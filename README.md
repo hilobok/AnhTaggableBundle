@@ -52,7 +52,7 @@ $ app/console doctrine:schema:update --force
         // ...
         $builder
             ->add('tags', 'tags', array(
-                'tagit' => array(/* ... */) // see https://github.com/hilobok/tag-it for available options, may be empty
+                'tagit' => array(/* ... */), // see https://github.com/hilobok/tag-it for available options, may be empty
                 'autocomplete' => 'dynamic' // default
             ))
         ;
