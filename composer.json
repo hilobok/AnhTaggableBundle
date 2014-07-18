@@ -12,6 +12,7 @@
 
     "require": {
         "anh/doctrine-extensions-taggable": "~1.0",
+        "anh/doctrine-resource-bundle": "0.2.*",
         "sp/bower-bundle": "~0.9"
     },
 
@@ -27,7 +28,7 @@
 
     "extra": {
         "branch-alias": {
-            "dev-master": "1.1-dev"
+            "dev-master": "1.2.x-dev"
         }
     }
 }

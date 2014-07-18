@@ -71,5 +71,18 @@ class AnhTaggableExtension extends Extension implements PrependExtensionInterfac
                 'AnhTaggableBundle' => null
             )
         ));
+
+        $container->prependExtensionConfig('anh_doctrine_resource', array(
+            'resources' => array(
+                'anh_taggable.tag' => array(
+                    'model' => '%anh_taggable.entity.tag.class%',
+                    'driver' => 'orm',
+                ),
+                'anh_taggable.tagging' => array(
+                    'model' => '%anh_taggable.entity.tagging.class%',
+                    'driver' => 'orm',
+                ),
+            )
+        ));
     }
 }
