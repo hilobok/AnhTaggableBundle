@@ -3,7 +3,6 @@
 namespace Anh\TaggableBundle\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 use Symfony\Component\Form\FormBuilderInterface;
 use Anh\Taggable\TaggableManager;
 use Anh\TaggableBundle\Form\Type\TagsTransformer;
@@ -125,7 +124,7 @@ class TagsType extends AbstractType
     /**
      * {@inheritdoc}
      */
-    public function configureOptions(OptionsResolverInterface $resolver)
+    public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setOptional(array(
             'autocomplete', // type of autocomplete
