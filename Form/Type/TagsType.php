@@ -64,9 +64,7 @@ class TagsType extends AbstractType
             'placeholderText'
         ));
 
-        $resolver->setAllowedTypes(array(
-            'autocomplete' => 'array' // http://api.jqueryui.com/autocomplete/
-        ));
+        $resolver->setAllowedTypes('autocomplete', 'array'); // http://api.jqueryui.com/autocomplete/
 
         $resolver->setDefaults(array(
             'allowSpaces' => true,
