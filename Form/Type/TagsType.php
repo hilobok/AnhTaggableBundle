@@ -138,9 +138,9 @@ class TagsType extends AbstractType
          * static  - all tags passed via attribute (limited to 100 tags)
          * custom  - no tags will be provided from db (custom list of tags may be passed by setting ['tag-it']['availableTags'])
          */
-        $resolver->setAllowedValues(array(
-            'autocomplete' => array('dynamic', 'static', 'custom')
-        ));
+        $resolver->setAllowedValues('autocomplete', array(
+            'dynamic', 'static', 'custom'
+            ));
         $resolver->setDefaults(array(
             'autocomplete' => 'dynamic'
         ));
