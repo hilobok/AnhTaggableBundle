@@ -45,7 +45,9 @@ class TagsType extends AbstractType
     protected function getTagitOptions(FormInterface $form)
     {
         $resolver = new OptionsResolver();
-        $resolver->setOptional(array(
+        $method = is_callable(array($resolver, 'setDefined')) ? 'setDefined' : 'setOptional';
++
++       $resolver->$method(array(
             'availableTags',
             'autocomplete',
             'showAutocompleteOnFocus',
