@@ -3,7 +3,6 @@
 namespace Anh\TaggableBundle\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 use Symfony\Component\Form\FormBuilderInterface;
 use Anh\Taggable\TaggableManager;
 use Anh\TaggableBundle\Form\Type\TagsTransformer;
@@ -46,7 +45,9 @@ class TagsType extends AbstractType
     protected function getTagitOptions(FormInterface $form)
     {
         $resolver = new OptionsResolver();
-        $resolver->setOptional(array(
+        $method = is_callable(array($resolver, 'setDefined')) ? 'setDefined' : 'setOptional';
++
++       $resolver->$method(array(
             'availableTags',
             'autocomplete',
             'showAutocompleteOnFocus',
@@ -63,9 +64,7 @@ class TagsType extends AbstractType
             'placeholderText'
         ));
 
-        $resolver->setAllowedTypes(array(
-            'autocomplete' => 'array' // http://api.jqueryui.com/autocomplete/
-        ));
+        $resolver->setAllowedTypes('autocomplete', 'array'); // http://api.jqueryui.com/autocomplete/
 
         $resolver->setDefaults(array(
             'allowSpaces' => true,
@@ -125,7 +124,7 @@ class TagsType extends AbstractType
     /**
      * {@inheritdoc}
      */
-    public function setDefaultOptions(OptionsResolverInterface $resolver)
+    public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setOptional(array(
             'autocomplete', // type of autocomplete
@@ -139,9 +138,9 @@ class TagsType extends AbstractType
          * static  - all tags passed via attribute (limited to 100 tags)
          * custom  - no tags will be provided from db (custom list of tags may be passed by setting ['tag-it']['availableTags'])
          */
-        $resolver->setAllowedValues(array(
-            'autocomplete' => array('dynamic', 'static', 'custom')
-        ));
+        $resolver->setAllowedValues('autocomplete', array(
+            'dynamic', 'static', 'custom'
+            ));
         $resolver->setDefaults(array(
             'autocomplete' => 'dynamic'
         ));
