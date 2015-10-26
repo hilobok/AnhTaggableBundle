@@ -62,7 +62,7 @@ $ app/console doctrine:schema:update --force
 
 `autocomplete` option:
 
-* `dynamic` - tags fetched dynamicaly via ajax (you may set custom url in `['tagit']['autocomplete']['source']`) (limited to 100 tags)
+* `dynamic` - tags fetched dynamically via ajax (you may set custom url in `['tagit']['autocomplete']['source']`) (limited to 100 tags)
 * `static`  - all tags passed via attribute (limited to 100 tags)
 * `custom`  - no tags will be provided from db (custom list of tags may be passed by setting `['tagit']['availableTags']`)
 
